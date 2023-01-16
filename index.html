@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighting Game</title>
+    
+    <link rel="icon" href="./assets/favicon-e4256d9a.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/index-b05651b4.css">
+</head>
+
+<body class="flex justify-center bg-neutral-800">
+    <div class="container flex flex-col items-center space-y-16 py-10 bg-purple-300 w-fit font-mono tracking-tighter">
+        <div class="text-5xl font-semibold italic underline">FIGHTING GAME</div>
+        <div class="content flex space-x-5">
+            <div class="pi flex flex-col justify-center items-center space-y-7 ">
+                <span class="font-bold  text-2xl" id="p1Name">Player 1</span>
+                <img id="p1" src="https://i.gifer.com/origin/00/0019f6845ceaa9347b881ccbe8f5644a_w200.gif"
+                    class="w-44" />
+                <div class="controls space-y-2">
+                    <div class="attack">
+                        Q: <button class="btn2 bg-yellow-500 hover:bg-yellow-600">Attack</button>
+                    </div>
+                    <div class="heal">
+                        A: <button class="btn2 bg-cyan-500 hover:bg-cyan-600">Heal</button>
+                    </div>
+                </div>
+                <div class="score score text-4xl font-bold" id="p1Health">100</div>
+            </div>
+            <div class="simulate flex justify-center items-center">
+                <button class="btn bg-green-600 h-fit hover:bg-green-700" id="play">Simulate</button>
+            </div>
+            <div class="p2 flex flex-col justify-center items-center space-y-7 font-mono tracking-tighter">
+                <span class="font-bold  text-2xl" id="p2Name">Player 2</span>
+                <img id="p2" src="https://i.imgur.com/Z0QCi47.gif" class="w-44" />
+                <div class="controls space-y-2">
+                    <div class="attack">
+                        P: <button class="btn2 bg-yellow-500 hover:bg-yellow-600">Attack</button>
+                    </div>
+                    <div class="heal">
+                        L: <button class="btn2 bg-cyan-500 hover:bg-cyan-600">Heal</button>
+                    </div>
+                </div>
+                <div class="score text-4xl font-bold" id="p2Health">100</div>
+            </div>
+        </div>
+        <div class="result font-mono font-semibold text-6xl text-green-600" id="result"></div>
+        <div class="reset">
+            <button id="reset" class="btn bg-red-600 h-fit hover:bg-red-700">Reset</button>
+        </div>
+    </div>
+
+    <audio id="p1attack" controls style="display:none">
+        <source src="/assets/fastpunch-08de360f.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="p1heal" controls style="display:none">
+        <source src="/assets/fastheal-d6299eda.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="p2attack" controls style="display:none">
+        <source src="/assets/quickhit-653f188f.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="p2heal" controls style="display:none">
+        <source src="/assets/quickheal-59b1271d.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="victory" controls style="display:none">
+        <source src="/assets/victory-76cbbe9c.mp3" type="audio/mpeg">
+    </audio>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
